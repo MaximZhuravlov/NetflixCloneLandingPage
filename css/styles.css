@@ -1,0 +1,306 @@
+:root {
+	--primary-color: #E50914;
+	--dark-color: #141414;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+	font-size: 100%;
+	font-weight: normal;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+body {
+	font-family: "Arial", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	background-color: #000;
+	color: #999;
+}
+
+h1, h2, h3, h4, h5, h6, a {
+	color: #FFF;
+}
+
+p {
+	margin: 0.5rem 0;
+}
+
+.container {
+	max-width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+	padding: 0 2rem;
+}
+
+.button {
+	display: inline-block;
+	background-color: var(--primary-color);
+	color: #FFF;
+	padding: 0.4rem 1.3rem;
+	font-size: 1rem;
+	text-align: center;
+	cursor: pointer;
+	margin-right: 0.5rem;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+	border-radius: 2px;
+}
+
+.button:hover {
+	opacity: 0.9;
+}
+
+.button-rounded {
+	border-radius: 5px;
+}
+
+.button-big {
+	font-size: 1rem;
+	padding: 0.8rem 1.3rem;
+	text-transform: uppercase;
+}
+
+.button-large {
+	font-size: 2rem;
+	padding: 1.5rem 2.1rem;
+	text-transform: uppercase;
+}
+
+.text-large {
+	font-size: 1.8rem;
+	margin-bottom: 1rem;	
+}
+
+.text-medium {
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+}
+
+.text-dark {
+	color: #999;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.header {
+	height: 93vh;
+	background-image: url("../images/background.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+}
+
+.header::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background-color: rgba(0, 0, 0, 0.6);
+	box-shadow: inset 120px 100px 250px #000, inset -120px -100px 250px #000;
+}
+
+	.header-top {
+		position: relative;
+		height: 90px;
+		z-index: 2;
+	}
+
+		.header-top img {
+			width: 170px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		.sign-in {
+			position: absolute;
+			top: 50%;
+			right: 0;
+			transform: translate(-50%, -50%);
+		}
+
+	.header-content {
+		position: relative;
+		margin: auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		margin-top: 9rem;
+		z-index: 2;
+	}
+
+		.header-content h1 {
+			font-weight: 700;
+			font-size: 5.2rem;
+			line-height: 1.1;
+			margin-bottom: 2rem;
+		}
+
+		.header-content p {
+			text-transform: uppercase;
+			color: #FFF;
+			font-weight: 400;
+			font-size: 1.9rem;
+			line-height: 1.25;
+			margin-bottom: 2rem;
+		}
+
+.tabs {
+	background-color: var(--dark-color);
+	padding-top: 1rem;
+	border-bottom: 3px solid #3D3D3D;
+}
+
+	.tabs-inner {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 1rem;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+	}
+
+	.tabs-inner > div {
+		padding: 1.5rem 0;
+	}
+
+	.tabs-inner > div:hover {
+		color: #FFF;
+		cursor: pointer;
+	}
+
+	.tabs p {
+		font-size: 1.2rem;
+		padding-top: 0.5rem;
+	}
+
+	.tab-border {
+		border-bottom: 4px solid var(--primary-color);
+	}
+
+.tabs-content {
+	padding: 3rem 0;
+	background-color: #000;
+	color: #FFF;
+}
+	#tab-1-content,
+	#tab-2-content,
+	#tab-3-content {
+		display: none;
+	}
+
+	.show {
+		display: block !important;
+	}
+
+	.tab-1-content-inner {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 2rem;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.tab-2-content-top {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		grid-gap: 1rem;
+		justify-content: center;
+		align-items: center;		
+	}
+
+	.tab-2-content-bottom {
+		margin-top: 2rem;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 2rem;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+
+	.price-table {
+		overflow-x: auto;
+		margin-top: 2rem;		
+	}
+
+		.price-table table {
+			width: 100%;
+			border-collapse: collapse;
+		}
+
+		.price-table tbody tr:nth-child(odd) {
+			background-color: #222;
+		}
+
+		.price-table th {
+			text-transform: uppercase;
+			padding: 0.8rem;
+		}
+
+		.price-table td {
+			color: #999;
+			padding: 0.8rem 1.2rem;
+			text-align: center;
+		}
+
+		.price-table td:first-child {
+			text-align: left;
+		}
+
+		.price-table .fa-check {
+			color: lime;
+		}
+
+		.price-table .fa-times {
+			color: red;
+		}
+
+.footer .container {
+	max-width: 75%;
+	margin: 1rem auto;
+	overflow: auto;
+}
+
+.footer, .footer a {
+	color: #999;
+	font-size: 0.9rem;
+}
+
+.footer p {
+	margin-bottom: 1.5rem;
+}
+
+.footer-columns {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 2rem;
+}
+
+	.footer-columns li {
+		line-height: 1.9;
+	}
